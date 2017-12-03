@@ -1,0 +1,43 @@
+from itertools import cycle
+
+locationpuzzle = 368078
+
+def right(x,y):
+    return x+1, y
+def down(x,y):
+    return x,y-1
+def left(x,y):
+    return x-1,y
+def up(x,y):
+    return x,y+1
+
+moves = [right, down, left, up]
+
+def gen_points(end):
+    moves2 = cycle(moves)
+    start = 1
+    pos = 0,0
+    steps = 1
+
+    yield start,pos
+
+    while True:
+        for i in range(2):
+            move = next(moves2)
+            for i in range(steps):
+                if start >= end:
+                    return
+                pos = move(*pos)
+                start +=1
+                yield start,pos
+
+        steps+=1
+
+location = list(gen_points(locationpuzzle))
+lx = location[-1][1][0]
+ly = location[-1][1][1]
+
+stepsintotal = abs(lx) + abs(ly)
+print (stepsintotal)
+
+
