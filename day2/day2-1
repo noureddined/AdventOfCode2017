@@ -1,0 +1,15 @@
+#day2#
+sumx = 0
+with open('test.txt') as f:
+    mylist = [[int(x) for x in line.strip().split('\t')] for line in f]
+
+for i in range(len(mylist)):
+    x = sorted(mylist[i])
+    x1 = int (x[0])
+    x2 = int (x[-1])
+    diff = (x2 - x1)
+    sumx += diff
+
+print (sumx)
+
+    
