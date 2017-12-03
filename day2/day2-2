@@ -1,0 +1,13 @@
+#day2-2#
+sumx = 0
+with open('input.txt') as f:
+    mylist = [[int(x) for x in line.split('\t')] for line in f]
+
+
+for i in range(len(mylist)):
+    y = mylist[i]
+    for x in y:
+        for z in y:            
+            if x%z == 0 and x != z:
+                sumx += (x/z)
+print (sumx)
