@@ -1,0 +1,17 @@
+#day 4-1#
+
+file = open("inputd4.txt", 'r').readlines()
+sum = 0
+listx = []
+for l in file:
+    l = l.replace('\n','')
+    listx.append(l.split(" "))
+
+for x in range(len(listx)):
+    xy = listx[x]
+    if len(xy) > len(set(xy)):
+        pass
+    else:
+        sum += 1
+
+print (sum)
