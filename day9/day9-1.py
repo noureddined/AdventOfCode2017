@@ -35,9 +35,6 @@ def createlist(text):
         
 listx = list(createlist(stringfile))
 
-for x in listx:
-    print('dit is x:' + str(x))
-
 #Bereken aantal groups #
 def maxDepth(S):
     current_max = 0
