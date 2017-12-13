@@ -21,7 +21,6 @@ for l in file:
 listcount = True
 while listcount == True:
     listleng = len(listy)
-#for test in range (0, 13):
     for x in listx:
         for y in listy:
             if y in x:
