@@ -4,7 +4,6 @@ file = open('day12.txt').readlines()
 
 listx = []
 listy = [0]
-listz = []
 
 midden = '<(.*?)\>'
 for l in file:
@@ -30,9 +29,7 @@ while listcount == True:
                     if item not in listy:
                         listy.append(item)
                         test = len(listy)
-                    else:
-                        listz.append(item)
-                        test = len(listy)
+
     if listleng == test:
         listcount = False
         
